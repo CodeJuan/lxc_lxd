@@ -51,7 +51,8 @@ cd libseccomp-2.3.1
 make
 make install
 
-
+# libcap-devel
+yum install libcap-devel -y
 
 
 # should disable apparmor selinux seccomp cgmanager LinuxCapabilities rpath
