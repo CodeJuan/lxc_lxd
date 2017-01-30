@@ -43,5 +43,15 @@ yum install -y libtool
 #Paths:
 # - Logs in configpath: no
 
+# install libseccomp
+wget https://github.com/seccomp/libseccomp/releases/download/v2.3.1/libseccomp-2.3.1.tar.gz
+tar xf libseccomp-2.3.1.tar.gz
+cd libseccomp-2.3.1
+./configure 
+make
+make install
+
+
+
 
 # should disable apparmor selinux seccomp cgmanager LinuxCapabilities rpath
