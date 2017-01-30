@@ -75,6 +75,12 @@ lxc-create: error while loading shared libraries: libseccomp.so.2: cannot open s
 #/usr/local/lib/libseccomp.so.2
 #/usr/local/lib/libseccomp.so
 #/usr/local/lib/libseccomp.so.2.3.1
-#[root@centos lxd]# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+[root@centos lxd]# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 #[root@centos lxd]# lxc-create version
 #lxc-create: missing container name, use --name option
+
+[root@centos lxd]# lxc-create -t ubuntu -n abc
+'debootstrap' command is missing
+lxc-create: lxccontainer.c: create_run_template: 1297 container creation template for abc failed
+lxc-create: tools/lxc_create.c: main: 318 Error creating container abc
+
