@@ -84,5 +84,14 @@ lxc-create: error while loading shared libraries: libseccomp.so.2: cannot open s
 lxc-create: lxccontainer.c: create_run_template: 1297 container creation template for abc failed
 lxc-create: tools/lxc_create.c: main: 318 Error creating container abc
 
-yum install debootstrap
+yum install debootstrap libvirt
 
+[root@centos lxd]# lxc-create -t ubuntu -n abc
+Checking cache download in /var/cache/lxc/precise/rootfs-amd64 ... 
+Installing packages in template: apt-transport-https,ssh,vim,language-pack-en
+Downloading ubuntu precise minimal ...
+which: no qemu-debootstrap in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/usr/sbin:/usr/bin:/sbin:/bin)
+W: Cannot check Release signature; keyring file not available /usr/share/keyrings/ubuntu-archive-keyring.gpg
+I: Retrieving InRelease 
+I: Retrieving Release 
+I: Retrieving Packages 
