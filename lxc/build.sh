@@ -84,3 +84,5 @@ lxc-create: error while loading shared libraries: libseccomp.so.2: cannot open s
 lxc-create: lxccontainer.c: create_run_template: 1297 container creation template for abc failed
 lxc-create: tools/lxc_create.c: main: 318 Error creating container abc
 
+yum install debootstrap
+
