@@ -62,3 +62,5 @@ yum install libcap-devel -y
 make
 make install
 
+# # lxc-create version
+# lxc-create: error while loading shared libraries: liblxc.so.1: cannot open shared object file: No such file or directory
