@@ -51,7 +51,7 @@ cd libseccomp-2.3.1
 make
 make install
 
-# libcap-devel
+# Linux capabilities
 yum install libcap-devel -y
 
 
