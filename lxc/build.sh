@@ -64,3 +64,17 @@ make install
 
 # # lxc-create version
 # lxc-create: error while loading shared libraries: liblxc.so.1: cannot open shared object file: No such file or directory
+export LD_LIBRARY_PATH=/usr/lib
+
+[root@centos lxd]# lxc-create version
+lxc-create: error while loading shared libraries: libseccomp.so.2: cannot open shared object file: No such file or directory
+[root@centos lxd]# find / -name "libseccomp.so*"
+#/root/systemcontainer/lxc/libseccomp-2.3.1/src/.libs/libseccomp.so.2
+#/root/systemcontainer/lxc/libseccomp-2.3.1/src/.libs/libseccomp.so
+#/root/systemcontainer/lxc/libseccomp-2.3.1/src/.libs/libseccomp.so.2.3.1
+#/usr/local/lib/libseccomp.so.2
+#/usr/local/lib/libseccomp.so
+#/usr/local/lib/libseccomp.so.2.3.1
+#[root@centos lxd]# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+#[root@centos lxd]# lxc-create version
+#lxc-create: missing container name, use --name option
