@@ -54,5 +54,11 @@ make install
 # Linux capabilities
 yum install libcap-devel -y
 
+# cgmanager???
 
 # should disable apparmor selinux seccomp cgmanager LinuxCapabilities rpath
+
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var  --with-distro=centos --disable-lua --enable-bash --disable-python --disable-selinux --disable-apparmor --disable-rpath --disable-cgmanager --disable-doc
+make
+make install
+
