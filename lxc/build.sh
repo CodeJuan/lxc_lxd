@@ -11,3 +11,37 @@ yum install -y libtool
 
 # ./configure
 ./configure
+
+#Environment:
+# - compiler: gcc
+# - distribution: centos
+# - init script type(s): sysvinit
+# - rpath: no
+# - GnuTLS: no
+# - Bash integration: yes
+#
+#Security features:
+# - Apparmor: no
+# - Linux capabilities: no
+# - seccomp: no
+# - SELinux: no
+# - cgmanager: no
+#
+#Bindings:
+# - lua: no
+# - python3: no
+#
+#Documentation:
+# - examples: yes
+# - API documentation: no
+# - user documentation: no
+#
+#Debugging:
+# - tests: no
+# - mutex debugging: no
+#
+#Paths:
+# - Logs in configpath: no
+
+
+# should disable apparmor selinux seccomp cgmanager LinuxCapabilities rpath
