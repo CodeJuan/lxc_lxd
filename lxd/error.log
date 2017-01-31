@@ -1,0 +1,35 @@
+[root@centos ~]# $GOPATH/bin/lxc launch ubuntu:16.04
+Creating guiding-starfish
+Retrieving image: 100% (900.42kB/s)
+
+Starting guiding-starfish           
+error: Error calling 'lxd forkstart guiding-starfish /var/lib/lxd/containers /var/log/lxd/guiding-starfish/lxc.conf': err='exit status 1'
+  lxc 20160131060441.305 ERROR lxc_start - start.c:must_drop_cap_sys_boot:641 - Failed to clone (0x30000011): Invalid argument (includes CLONE_NEWUSER).
+  lxc 20160131060441.308 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x3c020000): Invalid argument.
+  lxc 20160131060441.308 ERROR lxc_start - start.c:lxc_spawn:1149 - Invalid argument - Failed to clone a new set of namespaces.
+  lxc 20160131060441.315 ERROR lxc_start - start.c:__lxc_start:1346 - Failed to spawn container "guiding-starfish".
+  lxc 20160131060441.353 ERROR lxc_conf - conf.c:run_buffer:405 - Script exited with status 1.
+  lxc 20160131060441.353 ERROR lxc_start - start.c:lxc_fini:546 - Failed to run lxc.hook.post-stop for container "guiding-starfish".
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/systemd//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/perf_event//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/cpu//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/devices//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/net_cls//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/freezer//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/hugetlb//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/cpuset//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/memory//lxc/guiding-starfish
+  lxc 20160131060441.353 ERROR lxc_namespace - namespace.c:lxc_clone:67 - Failed to clone (0x10000000): Invalid argument.
+  lxc 20160131060441.353 ERROR lxc_cgfsng - cgroups/cgfsng.c:recursive_destroy:1270 - Error destroying /sys/fs/cgroup/blkio//lxc/guiding-starfish
+
+Try `lxc info --show-log local:guiding-starfish` for more info
+
