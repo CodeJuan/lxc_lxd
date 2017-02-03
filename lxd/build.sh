@@ -29,3 +29,4 @@ export PKG_CONFIG_PATH="/usr/lib/pkgconfig"
 #What IPv6 address should be used (CIDR subnet notation, “auto” or “none”) [default=auto]? none
 #LXD has been successfully configured.
 
+yum install -y squashfs-tools
